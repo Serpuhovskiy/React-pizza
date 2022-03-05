@@ -115,9 +115,10 @@ function Cart() {
             </div>
           </div>
           <div className="content__items">
-            {addedPizzas.map((pizza) => (
+            {addedPizzas.map((pizza, index) => (
               <CartItem
                 {...pizza}
+                key={index}
                 totalPrice={items[pizza.id].totalPrice}
                 totalCount={items[pizza.id].items.length}
                 deletePizzaItem={() => onRemoveItem(pizza.id)}
