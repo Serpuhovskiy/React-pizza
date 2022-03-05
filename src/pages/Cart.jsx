@@ -124,7 +124,6 @@ function Cart() {
                 deletePizzaItem={() => onRemoveItem(pizza.id)}
                 increasePizzaCount={() => dispatch(addPizzaToCart(pizza))}
                 removePizza={() => {
-                  console.log('PIZZA REMOVED');
                   dispatch(removePizzaFromCart(pizza.id));
                 }}
               />
