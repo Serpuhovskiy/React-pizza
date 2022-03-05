@@ -22,7 +22,6 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
     axios
       .get(`http://localhost:3001/pizzas?_sort=${sortBy === 'alphabet' ? 'name' : sortBy}`)
       .then(({ data }) => {
-        //   dispatch(setPizzas(data));
         dispatch(setPizzas(data));
       });
   }

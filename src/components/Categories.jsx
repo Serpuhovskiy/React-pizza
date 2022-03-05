@@ -1,16 +1,7 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React from 'react';
 
 export default React.memo(function Categories({ activeCategory, items, onClick }) {
-  // const [activeItem, setActiveItem] = useState(null);
-
-  // const onSelectItem = (index) => {
-  //   setActiveItem(index);
-  //   onClick(index);
-  // };
-
-  // console.log(activeCategory);
-
   return (
     <div className="categories">
       <ul>
@@ -33,12 +24,6 @@ export default React.memo(function Categories({ activeCategory, items, onClick }
               {item}
             </li>
           ))}
-
-        {/* <li>Мясные</li>
-      <li>Вегетарианская</li>
-      <li>Гриль</li>
-      <li>Острые</li>
-      <li>Закрытые</li> */}
       </ul>
     </div>
   );

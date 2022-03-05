@@ -8,8 +8,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSize, setActiveSize] = useState(sizes[0]);
 
-  // console.log(addedPizzas);
-
   const onSelectType = (index) => {
     setActiveType(index);
   };
@@ -25,11 +23,8 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       size: activeSize,
       type: typeItems[activeType],
     };
-    // console.log(obj);
     onClickAddPizza(obj);
   };
-
-  // console.log(addedCount);
 
   return (
     <div className="pizza-block">
@@ -63,7 +58,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">от {price} ₽</div>
-        {/* <div className="button button--outline button--add"> */}
         <Button onClick={onAddPizza} className="button--outline button--add" outline>
           <svg
             width="12"
@@ -79,7 +73,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
           <span>Добавить</span>
           {addedPizzas && <i>{addedPizzas.items.length}</i>}
         </Button>
-        {/* </div> */}
       </div>
     </div>
   );

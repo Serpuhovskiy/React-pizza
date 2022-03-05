@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-export default function Button({className, active, onClick, children}) {
-    // console.log(props.onClick);
+export default function Button({className, onClick, children}) {
     return (
         <button className={classNames('button', className         
         )} onClick={onClick}>{children}</button>

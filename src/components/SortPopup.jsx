@@ -1,17 +1,12 @@
 import classNames from 'classnames';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const SortPopup = React.memo(function SortPopup({ items, activeSortType, onClickSortType }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
   const sortRef = React.useRef();
   const activeLabel = items.find(obj => obj.type === activeSortType).name
 
-
-  // console.log(items);
-
   const onSelectItem = (index) => {
-    // setActiveItem(index);
     console.log(index);
     onClickSortType(index);
     setVisiblePopup(false);
