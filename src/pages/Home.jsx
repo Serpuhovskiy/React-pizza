@@ -25,6 +25,10 @@ function Home() {
 
   // console.log(isLoaded);
 
+  const randomKey = () => {
+    return Math.round(Math.random()*(100 - 10) + 100);
+  }
+
   const onSelectCategory = (index) => {
     dispatch(setCategory(index));
   };
@@ -61,7 +65,7 @@ function Home() {
           ? items.map((item) => (          
               <PizzaBlock onClickAddPizza={addPizzaFunc} addedPizzas={cartItems[item.id]} key={item.id} {...item} />
             ))
-          : Array(10).fill(<PizzaLoadingBlock />)}
+          : Array(10).fill(0).map((_, index) => <PizzaLoadingBlock key={index}/>)}
       </div>
     </div>
   );
