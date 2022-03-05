@@ -7,7 +7,7 @@ import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchPizzas } from '../redux/actions/pizzas';
 import { addPizzaToCart } from '../redux/actions/cart';
 
-const categoryNames = ['Мzzzясные', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые'];
+const categoryNames = ['Мясные', 'Вегетарианские', 'Гриль', 'Острые', 'Закрытые'];
 const sortItems = [
   { name: 'популярности', type: 'popular' },
   { name: 'цене', type: 'price' },
