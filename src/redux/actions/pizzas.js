@@ -11,7 +11,7 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
   if (category !== null) {
     axios
       .get(
-        `/pizzas?category=${category}&_sort=${
+        `http://localhost:3001/pizzas?category=${category}&_sort=${
           sortBy === 'alphabet' ? 'name' : sortBy
         }`,
       )
@@ -20,7 +20,7 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
       });
   } else {
     axios
-      .get(`/pizzas?_sort=${sortBy === 'alphabet' ? 'name' : sortBy}`)
+      .get(`http://localhost:3001/pizzas?_sort=${sortBy === 'alphabet' ? 'name' : sortBy}`)
       .then(({ data }) => {
         dispatch(setPizzas(data));
       });
