@@ -1,5 +1,7 @@
 # Getting Started with React-Pizza
 
+## Протестировать проект - [https://react-pizza-client-serp.herokuapp.com/](https://react-pizza-client-serp.herokuapp.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
