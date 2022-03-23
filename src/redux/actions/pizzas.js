@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const API_URL = process.env.API_URL;
 
-console.log('NODE_ENV', process.env.NODE_ENV, 'REACT_APP_API', process.env.REACT_APP_API);
+// console.log('NODE_ENV', process.env.NODE_ENV, 'REACT_APP_API', process.env.REACT_APP_API);
+console.log(API_URL);
 
 export const setLoaded = (payload) => ({
   type: 'SET_LOADED',
