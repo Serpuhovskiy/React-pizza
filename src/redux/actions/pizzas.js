@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API : 'http://localhost:3003';
+// const API_URL = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API : 'http://localhost:3003';
 
 console.log('NODE_ENV', process.env.NODE_ENV, 'REACT_APP_API', process.env.REACT_APP_API);
 
