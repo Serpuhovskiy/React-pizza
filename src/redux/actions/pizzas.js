@@ -16,8 +16,6 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
   if (category !== null) {
     axios
       .get(
-        // `/pizzas?category=${category}&_sort=${sortBy === 'alphabet' ? 'name' : sortBy
-        // }`)
         `${API_URL}/pizzas?category=${category}&_sort=${sortBy === 'alphabet' ? 'name' : sortBy
         }`)
       .then(({ data }) => {
@@ -26,7 +24,6 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
   } else {
     axios
       .get(`${API_URL}/pizzas?_sort=${sortBy === 'alphabet' ? 'name' : sortBy}`)
-      // .get(`/pizzas?_sort=${sortBy === 'alphabet' ? 'name' : sortBy}`)
       .then(({ data }) => {
         dispatch(setPizzas(data));
       });
