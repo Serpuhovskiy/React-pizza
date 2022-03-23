@@ -14,7 +14,7 @@ export default function Header() {
           <div className="header__logo">
             <img width="38" src={logo} alt="Pizza logo" />
             <div>
-              <h1>React Piiizzzzqqza</h1>
+              <h1>React PPPPiiizzzzqqza</h1>
               <p>самая вкусная пицца во вселенной</p>
             </div>
           </div>
