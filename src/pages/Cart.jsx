@@ -14,7 +14,6 @@ function Cart() {
   const dispatch = useDispatch();
 
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
-  console.log(totalPrice, totalCount);
 
   const addedPizzas = Object.keys(items).map((key) => {
     return items[key].items[0];
@@ -35,7 +34,6 @@ function Cart() {
       dispatch(removeCartItem(id));
     }
   };
-  // console.log(addedPizzas);
 
   return (
     <div className="container container--cart">

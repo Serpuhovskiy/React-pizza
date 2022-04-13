@@ -16,9 +16,9 @@ const sortItems = [
 
 function Home() {
   const dispatch = useDispatch();
-  const items = useSelector(({ pizzas}) => pizzas.items);
+  const items = useSelector(({ pizzas }) => pizzas.items);
   const cartItems = useSelector(({ cart }) => cart.items);
-  const isLoaded = useSelector(({ pizzas}) => pizzas.isLoaded);
+  const isLoaded = useSelector(({ pizzas }) => pizzas.isLoaded);
   const { category, sortBy } = useSelector(({ filters }) => filters);
 
   const onSelectCategory = (index) => {
@@ -32,7 +32,6 @@ function Home() {
 
   const addPizzaFunc = (obj) => {
     dispatch(addPizzaToCart(obj));
-    console.log('PIZZA ADDED TO CART');
   };
 
   return (

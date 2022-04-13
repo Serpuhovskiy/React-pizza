@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '.';
 
 function CartItem({ name, type, size, imageUrl, totalPrice, totalCount, increasePizzaCount, deletePizzaItem, removePizza }) {
-  console.log(imageUrl);
   return (
     <div className="cart__item">
       <div className="cart__item-img">

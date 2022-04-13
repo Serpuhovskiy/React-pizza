@@ -2,8 +2,6 @@ import axios from 'axios';
 
 const API_URL = 'https://react-pizza-json-server.herokuapp.com';
 
-// console.log('NODE_ENV', process.env.NODE_ENV, 'REACT_APP_API', process.env.REACT_APP_API);
-console.log(API_URL);
 
 export const setLoaded = (payload) => ({
   type: 'SET_LOADED',
@@ -11,7 +9,6 @@ export const setLoaded = (payload) => ({
 });
 
 export const fetchPizzas = (category, sortBy) => (dispatch) => {
-  console.log(category, sortBy);
   dispatch(setLoaded(false));
   if (category !== null) {
     axios
